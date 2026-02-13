@@ -1,0 +1,99 @@
+# Configuration du site
+site_name: AdvancedDevSample API Documentation
+site_description: Documentation technique complète de l'API de gestion de produits, clients, fournisseurs et commandes
+site_author: Votre Équipe
+site_url: https://github.com/Mervilois/AdvancedDevSample.Domain/
+
+# Configuration du dépôt GitHub
+repo_url: https://github.com/Mervilois/AdvancedDevSample.Domain/
+repo_name: GitHub
+edit_uri: edit/main/docs/
+
+# Thème Material avec personnalisation
+theme:
+  name: material
+  language: fr
+  palette:
+    # Mode clair
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode sombre
+    # Mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode clair
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions Markdown
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search:
+      lang: fr
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - glightbox
+
+# Configuration supplémentaire
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Mervilois/AdvancedDevSample.Domain/
+      name: Dépôt GitHub
+  generator: false
+  consent:
+    title: Consentement des cookies
+    description: >-
+      Nous utilisons des cookies pour améliorer votre expérience de navigation.
+
+# Navigation
+nav:
+  - Accueil: index.md
+  - Architecture:
+    - Vue d'ensemble: architecture/overview.md
+    - Couche Domain: architecture/domain.md
+    - Couche Application: architecture/application.md
+    - Couche Infrastructure: architecture/infrastructure.md
+    - Couche API: architecture/api.md
+  - Fonctionnalités:
+    - Produits: features/products.md
+    - Clients: features/customers.md
+    - Fournisseurs: features/suppliers.md
+    - Commandes: features/orders.md
+  - Guides:
+    - Installation: guides/setup.md
+    - Tests: guides/testing.md
+    - Déploiement: guides/deployment.md
+  - Référence API:
+    - Endpoints: api-reference/endpoints.md
+
+# Copyright
+copyright: "© 2026 - Documentation AdvancedDevSample"
